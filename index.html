@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Laboratory work#4</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="color.css">
+    <link rel="icon" href="img/icon.png" type="image/x-icon">
+</head>
+<style>
+div {
+  border: 1px solid gray;
+  padding: 8px;
+  background: rgba(0, 128, 0, 0.1);	
+}
+div .v1 {
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+  margin-left: 550px;
+  float: center;
+  padding: 50px;
+  text-align: right;
+  background-color: lightgray;
+}
+
+div .v2 {
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+  margin: 10px;
+  float: center;
+  padding: 50px;
+  text-align: center;
+  background-color: lightgray;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #4CAF50;
+}
+
+p {
+  text-indent: 200px;
+  text-align: justify;
+  letter-spacing: 3px;
+  background-color: white;
+}
+
+b {
+  text-decoration: none;
+  color: #008CBA;
+}
+</style>
+<body onload="func_onload_1()">
+	<div>
+	<center><h1>Лабораторная Работа №4</h1></center>
+	<center><h2 class="txt">АВТОР РАБОТЫ: </h2>
+	<h2 onclick="showAuthor(this)" onmouseover="style.color='red'"onmouseout="style.color='blue'">->Click<-</h2></center>
+	</div>
+	<hr>
+		<center><h1>Onchage Events</h1></center>
+	<hr>
+	<div>
+	<p>
+		<center><b>Onchage Event_1</b><center><br>
+		<center>
+		<select id="mySelect" onchange="func_onchange_1()">
+  			<option value="Offer1">Choice1</option>
+  			<option value="Offer2">Choice2</option>
+  			<option value="Offer3">Choice3</option>
+  			<option value="Offer4">Choice4</option>	
+		</select>
+		</center>
+	<br>
+	<p>When you select a new car, a function is triggered which outputs the value of the selected car.</p><br>
+	<center><b><p id="demo"></p></b></center>
+	</p>
+
+	<center><b>Onchage Event_2</b><center>
+	<p>Modify the text in the input field, then click outside the field to fire the onchange event.</p> 
+	Enter some text here: <input type="text" name="txt" value="Hello" onchange="func_onchange_2(this.value)">
+	<br><br><br>	
+
+	<center><b>Onchange Event_3</b></center>
+	<p>This example demonstrates how to assign an "onchange" event to an input element.</p>
+	Enter your name: <input type="text" id="fname" onchange="func_onchange_3()">	
+	<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p><br>	
+	</div>
+	<hr>
+		<center><h1>Onclick Events</h1></center>
+	<hr>
+	<div>
+	<br>
+	<center><b>Onclick Event_1</b><center><br>
+	<center>
+		Field1: <input type="text" id="field1" value="Hello World!"><br>
+		Field2: <input type="text" id="field2"><br><br>
+		<button onclick="func_onclick_1()">Copy Text</button>
+		<p>A function is triggered when the button is clicked. The function copies the text from Field1 into Field2.</p>
+	</center>
+	<center><b>Onclick Event_2</b><center><br>
+	<center>
+	<p onclick="func_onclick_2(this, 'red')">Click me to change my text color.</p>
+	</center>
+	<center><b>Onclick Event_3</b></center>
+	<center>
+	<p>Click the button to display the time.</p>
+	<button onclick="getElementById('demo1').innerHTML=Date()">What is the time?</button>
+	<p id="demo1"></p>
+	</center>
+	</div>
+	<hr>
+		<center><h1>Onmouserover and Onmouseout Events</h1></center>
+	<hr>
+	<div>
+		<br>
+		<center><b>Onmouseover Event</b></center>
+		<center>
+		<h3>This example demonstrates the onmouseover.</h3>
+		<p>The onmouseover event occurs when the mouse pointer enters the div element, and its child elements (p and span).</p>
+		</center>
+		<div class="v1" onmouseover="func_onmouseover()">
+  			<p><-onmouseover:<br><span id="demo2">Mouse over me!</span></p>
+		</div>
+		<br>
+		<center><b>Onmouseout Event</b></center>
+		<center>
+			<h3>This example demonstrates the onmouseout.</h3>
+			<p>The onmouseout event occurs when the mouse pointer is moved out of the div element, and when it 
+			leaves its child elements (p and span).</p>
+			<div class="v2" onmouseout="func_onmouseout()">
+		    	<p><-onmouseout: <br> <span id="demo3">Mouse over and leave me!</span></p>
+			</div>
+		</center>
+	</div>
+	<hr>
+		<center><h1>Onload Events</h1></center>
+	<hr>
+	<div>
+		<br>
+		<center><b>Onload Event</b></center><br>
+		<center><h2>Onload Event была представлена в самом начале при обновлении странице!<h2></center>	
+	</div>
+	<hr>
+		<center><h1>Проверка на HTTP-сервере на языке PERL</h1></center>
+	<hr>
+	<div>
+		<br>
+		<center><b>Проверка Интерпретатора</b></center><br>
+		<form name="" action="cgi-bin/server.pl"  method="post">
+			<center><input type="text" name="name" value="Введи выражение" size="20"> <hr></center>
+		</form>
+	</div>
+</body>
+<script src="almas.js"></script>
+</html>
